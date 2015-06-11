@@ -1,0 +1,10 @@
+Simple Java Programs to test Lambda Expressions in Java 8
+
+To build and run the unit tests:
+
+mvn test
+
+
+To run the main class:
+
+mvn exec:java -Dexec.mainClass="com.techyugadi.examples.lambda.LambdaExample"
