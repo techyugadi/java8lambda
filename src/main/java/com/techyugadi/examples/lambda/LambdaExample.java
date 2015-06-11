@@ -4,6 +4,20 @@ import java.util.function.Predicate;
 import java.util.List;
 import java.util.Arrays;
 
+/*
+ * Scenario: An ISV sells a service on the cloud.
+ * The pricing is based on number of users licensed to access the service.
+ * If number of users < 100, the service is priced at $ 100 per user
+ * If number of users >= 100 and < 500, the service is priced at $ 80 per user
+ * If number of users > 500, the service is priced at $ 60 per user
+ *
+ * The total revenue from a deal is calculated as:
+ * (Price per user)*(Number of users) + 0.2*(Price per user)*(Number of users)
+ * 20 per cent of the licence price is added for Customer Support
+ *
+ * Using Lambda Expressions, we will calculate the total revenues from given
+ * list of deal sizes (in terms of number of licensed users)
+ */
 public class LambdaExample {
 
     public static int revenue = 0;
