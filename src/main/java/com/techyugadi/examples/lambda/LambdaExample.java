@@ -9,7 +9,7 @@ import java.util.Arrays;
  * The pricing is based on number of users licensed to access the service.
  * If number of users < 100, the service is priced at $ 100 per user
  * If number of users >= 100 and < 500, the service is priced at $ 80 per user
- * If number of users > 500, the service is priced at $ 60 per user
+ * If number of users >= 500, the service is priced at $ 60 per user
  *
  * The total revenue from a deal is calculated as:
  * (Price per user)*(Number of users) + 0.2*(Price per user)*(Number of users)
@@ -24,8 +24,8 @@ public class LambdaExample {
     public static int calculateTotalRevenue(List<Integer> deals) {
 
 	Predicate<Integer> lessThan100 = (n) -> n < 100;
-	Predicate<Integer> betn100And500 = (n) -> n > 100 && n < 500;
-	Predicate<Integer> moreThan500 = (n) -> n > 500;
+	Predicate<Integer> betn100And500 = (n) -> n >= 100 && n < 500;
+	Predicate<Integer> moreThan500 = (n) -> n >= 500;
 
 	deals.stream()
 	     .filter(lessThan100)
