@@ -1,13 +1,14 @@
 language: java
 
-jdk:
-   - oraclejdk8
+build_image:
+   - openjdk-8-jdk
 
 before_install:
    - echo "Before Install"
 
 install:
    - echo "Install Step"
+   - apt-get install maven
 
 
 after_install:
@@ -20,12 +21,16 @@ before_script:
 
 after_success:
    - echo "SUCCESS"
+   - mvn package
 
 after_failure:
    - echo "FAILURE"
 
 after_script:
    - echo "After Script"
+
+archive:
+   - true
 
 notifications:
       email:
