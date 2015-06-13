@@ -29,9 +29,6 @@ after_failure:
 after_script:
    - echo "After Script"
 
-archive:
-   - true
-
 notifications:
       email:
           recipients:
