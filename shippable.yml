@@ -1,12 +1,13 @@
 language: java
 
-build_image: java/openjdk-8-jdk
+build_image: ubuntu
 
 before_install:
    - echo "Before Install"
 
 install:
    - echo "Install Step"
+   - apt-get install openjdk-8-jdk
    - apt-get install maven
 
 
@@ -27,6 +28,8 @@ after_failure:
 
 after_script:
    - echo "After Script"
+
+archive: true
 
 notifications:
       email:
