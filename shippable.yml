@@ -1,14 +1,12 @@
 language: java
 
-build_image: ubuntu
+build_image: azul/zulu-openjdk:8
 
 before_install:
    - echo "Before Install"
 
 install:
    - echo "Install Step"
-   - apt-get update
-   - apt-get install openjdk-8-jdk
    - apt-get install maven
 
 
