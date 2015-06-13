@@ -6,8 +6,8 @@ before_install:
    - echo "Before Install"
 
 install:
-   - echo "Install Step"
-   - apt-get install -y maven
+   - echo "Install Step (Maven)"
+   - apt-get -y install maven
 
 
 after_install:
