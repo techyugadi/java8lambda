@@ -21,9 +21,12 @@ before_script:
 after_success:
    - echo "SUCCESS"
    - mvn package
+   - cp target/*.jar shippable/buildoutput/.
+   - cp target/surefire-reports/*.xml shippable/testresults/.
 
 after_failure:
    - echo "FAILURE"
+   - cp target/surefire-reports/*.xml shippable/testresults/.
 
 after_script:
    - echo "After Script"
