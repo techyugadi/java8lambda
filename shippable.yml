@@ -1,6 +1,6 @@
 language: java
 
-build_image: openjdk-8-jdk
+build_image: java/openjdk-8-jdk
 
 before_install:
    - echo "Before Install"
